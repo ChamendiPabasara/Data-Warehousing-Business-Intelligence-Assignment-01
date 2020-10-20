@@ -1,0 +1,2522 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/27/2020 1:47:09 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-MBM4LPUK"
+  DTS:CreatorName="LAPTOP-MBM4LPUK\chame"
+  DTS:DTSID="{50DBD855-7187-44B0-BE12-6018FC15FAFC}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.68"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="ETL"
+  DTS:PackageType="5"
+  DTS:VersionBuild="21"
+  DTS:VersionGUID="{949467B6-8EB8-43FC-AF4C-082F7E378672}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{232B60B6-094D-4A6D-9DEB-F77330A2D0DD}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\SLIIT Data Warehouse Solution Tutorial\SSISTutorial_IT18115208\CustomerAddress.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="customer_id"
+              DTS:DTSID="{4C761544-4112-4C5A-8398-5C0E09432D30}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="25"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="customer_zip_code_prefix"
+              DTS:DTSID="{D973CDCE-BD66-42A9-A7E7-938537DB7292}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="25"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="customer_city"
+              DTS:DTSID="{BF899ABF-B913-4A78-962D-3D002477B273}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="5"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="customer_state"
+              DTS:DTSID="{6369285E-112B-41CC-8D2C-8F8FE8CAE82B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Address"
+              DTS:DTSID="{111B36B2-418A-493F-B4FD-94AA8EA372AD}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{4D94D185-EF90-4282-A699-FFDF632103B7}"
+      DTS:ObjectName="Flat File Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\Data Warehouse Solution Assignment1\SSIS_Assignment_IT18115208\CustomerAddress.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="customer_id"
+              DTS:DTSID="{1E376BDD-32B8-41AF-BC69-AD92D0242620}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="customer_zip_code_prefix"
+              DTS:DTSID="{B8BB68C3-5AF0-489F-A6A9-E36F25263674}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="customer_city"
+              DTS:DTSID="{7A440E7E-D07F-40E6-B6DA-AE59F50DABCA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="customer_state"
+              DTS:DTSID="{6CBFB488-09CF-4B1A-B006-8103DC7FD1DD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Address"
+              DTS:DTSID="{4D719573-8986-4BFF-A6D0-339526959D41}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LAPTOP-MBM4LPUK.SourceDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{7DF35749-5A9C-401C-9A3A-4FDA902EFC34}"
+      DTS:ObjectName="LAPTOP-MBM4LPUK.SourceDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=LAPTOP-MBM4LPUK;Initial Catalog=SourceDB;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LAPTOP-MBM4LPUK.SourceDB_DW]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{3A3A752C-5B9E-4AFB-B5C1-ED1873243C8A}"
+      DTS:ObjectName="LAPTOP-MBM4LPUK.SourceDB_DW">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=LAPTOP-MBM4LPUK;Initial Catalog=SourceDB_DW;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Extract Customer Address Text Data to Staging"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{0089A9C5-0394-4F4D-A43A-A83769104C30}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Extract Customer Address Text Data to Staging"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Extract Customer Address Text Data to Staging\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract Customer Address Text Data to Staging\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Extract Customer Address Text Data to Staging\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Customer Address Text Data to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[customer_id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Extract Customer Address Text Data to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[customer_id]"
+                      length="255"
+                      lineageId="Package\Extract Customer Address Text Data to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[customer_id]"
+                      name="customer_id"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Customer Address Text Data to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[customer_zip_code_prefix]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Extract Customer Address Text Data to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[customer_zip_code_prefix]"
+                      length="25"
+                      lineageId="Package\Extract Customer Address Text Data to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[customer_zip_code_prefix]"
+                      name="customer_zip_code_prefix"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Customer Address Text Data to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[customer_city]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Extract Customer Address Text Data to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[customer_city]"
+                      length="25"
+                      lineageId="Package\Extract Customer Address Text Data to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[customer_city]"
+                      name="customer_city"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Customer Address Text Data to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[customer_state]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Extract Customer Address Text Data to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[customer_state]"
+                      length="5"
+                      lineageId="Package\Extract Customer Address Text Data to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[customer_state]"
+                      name="customer_state"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Customer Address Text Data to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[Address]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Extract Customer Address Text Data to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Address]"
+                      length="100"
+                      lineageId="Package\Extract Customer Address Text Data to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[Address]"
+                      name="Address"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract Customer Address Text Data to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[customer_id]"
+                      dataType="wstr"
+                      length="50"
+                      name="customer_id" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Customer Address Text Data to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[customer_zip_code_prefix]"
+                      dataType="numeric"
+                      name="customer_zip_code_prefix"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Customer Address Text Data to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[customer_city]"
+                      dataType="wstr"
+                      length="50"
+                      name="customer_city" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Customer Address Text Data to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[customer_state]"
+                      dataType="wstr"
+                      length="50"
+                      name="customer_state" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Customer Address Text Data to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Address]"
+                      dataType="wstr"
+                      length="50"
+                      name="Address" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Extract Customer Address Text Data to Staging\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Customer Address Text Data to Staging\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Extract Customer Address Text Data to Staging\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Extract Customer Address Text Data to Staging\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract Customer Address Text Data to Staging\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract Customer Address Text Data to Staging\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract Customer Address Text Data to Staging\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract Customer Address Text Data to Staging\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[CustomerAddress_Staging]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract Customer Address Text Data to Staging\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-MBM4LPUK.SourceDB_DW]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-MBM4LPUK.SourceDB_DW]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Extract Customer Address Text Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract Customer Address Text Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[customer_id]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="customer_id"
+                      externalMetadataColumnId="Package\Extract Customer Address Text Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customer_id]"
+                      lineageId="Package\Extract Customer Address Text Data to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[customer_id]" />
+                    <inputColumn
+                      refId="Package\Extract Customer Address Text Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[customer_zip_code_prefix]"
+                      cachedDataType="wstr"
+                      cachedLength="25"
+                      cachedName="customer_zip_code_prefix"
+                      externalMetadataColumnId="Package\Extract Customer Address Text Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customer_zip_code_prefix]"
+                      lineageId="Package\Extract Customer Address Text Data to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[customer_zip_code_prefix]" />
+                    <inputColumn
+                      refId="Package\Extract Customer Address Text Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[customer_city]"
+                      cachedDataType="wstr"
+                      cachedLength="25"
+                      cachedName="customer_city"
+                      externalMetadataColumnId="Package\Extract Customer Address Text Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customer_city]"
+                      lineageId="Package\Extract Customer Address Text Data to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[customer_city]" />
+                    <inputColumn
+                      refId="Package\Extract Customer Address Text Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[customer_state]"
+                      cachedDataType="wstr"
+                      cachedLength="5"
+                      cachedName="customer_state"
+                      externalMetadataColumnId="Package\Extract Customer Address Text Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customer_state]"
+                      lineageId="Package\Extract Customer Address Text Data to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[customer_state]" />
+                    <inputColumn
+                      refId="Package\Extract Customer Address Text Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Address]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Address"
+                      externalMetadataColumnId="Package\Extract Customer Address Text Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Address]"
+                      lineageId="Package\Extract Customer Address Text Data to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[Address]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract Customer Address Text Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customer_id]"
+                      dataType="wstr"
+                      length="255"
+                      name="customer_id" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Customer Address Text Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customer_zip_code_prefix]"
+                      dataType="wstr"
+                      length="25"
+                      name="customer_zip_code_prefix" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Customer Address Text Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customer_city]"
+                      dataType="wstr"
+                      length="25"
+                      name="customer_city" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Customer Address Text Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customer_state]"
+                      dataType="wstr"
+                      length="5"
+                      name="customer_state" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Customer Address Text Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Address]"
+                      dataType="wstr"
+                      length="100"
+                      name="Address" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extract Customer Address Text Data to Staging\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Extract Customer Address Text Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Customer Address Text Data to Staging\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract Customer Address Text Data to Staging\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract Customer Address Text Data to Staging\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract Customer Address Text Data to Staging\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Extract Customer Address Text Data to Staging.Paths[Flat File Source Output]"
+              endId="Package\Extract Customer Address Text Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Extract Customer Address Text Data to Staging\Flat File Source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Extract Customer Data to Staging"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{E71BDD6A-E255-47C2-8F0D-17044D4AC316}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Extract Customer Data to Staging"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:EventHandlers>
+        <DTS:EventHandler
+          DTS:refId="Package\Extract Customer Data to Staging.EventHandlers[OnPreExecute]"
+          DTS:CreationName="OnPreExecute"
+          DTS:DTSID="{7B525E1A-5866-44B3-BD82-FFC2965812DF}"
+          DTS:EventID="1711301888"
+          DTS:EventName="OnPreExecute"
+          DTS:LocaleID="-1">
+          <DTS:Variables>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:Description="The propagate property of the event"
+              DTS:DTSID="{EA26CFD5-1593-4207-8CBA-DEDA9D834750}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="System"
+              DTS:ObjectName="Propagate">
+              <DTS:VariableValue
+                DTS:DataType="11">-1</DTS:VariableValue>
+            </DTS:Variable>
+          </DTS:Variables>
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\Extract Customer Data to Staging.EventHandlers[OnPreExecute]\Truncate Customer Staging Table"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{CA41E335-5EAA-42CD-9116-0FBE0AFD6C6B}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Truncate Customer Staging Table">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{3A3A752C-5B9E-4AFB-B5C1-ED1873243C8A}"
+                  SQLTask:SqlStatementSource="truncate table dbo.Customer_Staging" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+        </DTS:EventHandler>
+      </DTS:EventHandlers>
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Extract Customer Data to Staging\Load Data to to Customer Staging table"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Load Data to to Customer Staging table"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Customer_Staging]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract Customer Data to Staging\Load Data to to Customer Staging table.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-MBM4LPUK.SourceDB_DW]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-MBM4LPUK.SourceDB_DW]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Extract Customer Data to Staging\Load Data to to Customer Staging table.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract Customer Data to Staging\Load Data to to Customer Staging table.Inputs[OLE DB Destination Input].Columns[customer_id]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="customer_id"
+                      externalMetadataColumnId="Package\Extract Customer Data to Staging\Load Data to to Customer Staging table.Inputs[OLE DB Destination Input].ExternalColumns[customer_id]"
+                      lineageId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[customer_id]" />
+                    <inputColumn
+                      refId="Package\Extract Customer Data to Staging\Load Data to to Customer Staging table.Inputs[OLE DB Destination Input].Columns[customer_unique_id]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="customer_unique_id"
+                      externalMetadataColumnId="Package\Extract Customer Data to Staging\Load Data to to Customer Staging table.Inputs[OLE DB Destination Input].ExternalColumns[customer_unique_id]"
+                      lineageId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[customer_unique_id]" />
+                    <inputColumn
+                      refId="Package\Extract Customer Data to Staging\Load Data to to Customer Staging table.Inputs[OLE DB Destination Input].Columns[Customerfname]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Customerfname"
+                      externalMetadataColumnId="Package\Extract Customer Data to Staging\Load Data to to Customer Staging table.Inputs[OLE DB Destination Input].ExternalColumns[Customerfname]"
+                      lineageId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Customerfname]" />
+                    <inputColumn
+                      refId="Package\Extract Customer Data to Staging\Load Data to to Customer Staging table.Inputs[OLE DB Destination Input].Columns[Customerlname]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Customerlname"
+                      externalMetadataColumnId="Package\Extract Customer Data to Staging\Load Data to to Customer Staging table.Inputs[OLE DB Destination Input].ExternalColumns[Customerlname]"
+                      lineageId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Customerlname]" />
+                    <inputColumn
+                      refId="Package\Extract Customer Data to Staging\Load Data to to Customer Staging table.Inputs[OLE DB Destination Input].Columns[Gender]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Gender"
+                      externalMetadataColumnId="Package\Extract Customer Data to Staging\Load Data to to Customer Staging table.Inputs[OLE DB Destination Input].ExternalColumns[Gender]"
+                      lineageId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Gender]" />
+                    <inputColumn
+                      refId="Package\Extract Customer Data to Staging\Load Data to to Customer Staging table.Inputs[OLE DB Destination Input].Columns[PhonrNumber]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="PhonrNumber"
+                      externalMetadataColumnId="Package\Extract Customer Data to Staging\Load Data to to Customer Staging table.Inputs[OLE DB Destination Input].ExternalColumns[PhonrNumber]"
+                      lineageId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[PhonrNumber]" />
+                    <inputColumn
+                      refId="Package\Extract Customer Data to Staging\Load Data to to Customer Staging table.Inputs[OLE DB Destination Input].Columns[Email]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Email"
+                      externalMetadataColumnId="Package\Extract Customer Data to Staging\Load Data to to Customer Staging table.Inputs[OLE DB Destination Input].ExternalColumns[Email]"
+                      lineageId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Email]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract Customer Data to Staging\Load Data to to Customer Staging table.Inputs[OLE DB Destination Input].ExternalColumns[customer_id]"
+                      dataType="wstr"
+                      length="255"
+                      name="customer_id" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Customer Data to Staging\Load Data to to Customer Staging table.Inputs[OLE DB Destination Input].ExternalColumns[customer_unique_id]"
+                      dataType="wstr"
+                      length="255"
+                      name="customer_unique_id" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Customer Data to Staging\Load Data to to Customer Staging table.Inputs[OLE DB Destination Input].ExternalColumns[Customerfname]"
+                      dataType="wstr"
+                      length="255"
+                      name="Customerfname" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Customer Data to Staging\Load Data to to Customer Staging table.Inputs[OLE DB Destination Input].ExternalColumns[Customerlname]"
+                      dataType="wstr"
+                      length="255"
+                      name="Customerlname" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Customer Data to Staging\Load Data to to Customer Staging table.Inputs[OLE DB Destination Input].ExternalColumns[Gender]"
+                      dataType="wstr"
+                      length="255"
+                      name="Gender" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Customer Data to Staging\Load Data to to Customer Staging table.Inputs[OLE DB Destination Input].ExternalColumns[PhonrNumber]"
+                      dataType="wstr"
+                      length="255"
+                      name="PhonrNumber" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Customer Data to Staging\Load Data to to Customer Staging table.Inputs[OLE DB Destination Input].ExternalColumns[Email]"
+                      dataType="wstr"
+                      length="255"
+                      name="Email" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extract Customer Data to Staging\Load Data to to Customer Staging table.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Extract Customer Data to Staging\Load Data to to Customer Staging table.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Customer Data to Staging\Load Data to to Customer Staging table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract Customer Data to Staging\Load Data to to Customer Staging table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract Customer Data to Staging\Load Data to to Customer Staging table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract Customer Data to Staging\Load Data to to Customer Staging table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract Customer Data to Staging\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[CustomerDetails]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract Customer Data to Staging\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-MBM4LPUK.SourceDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-MBM4LPUK.SourceDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[customer_id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[customer_id]"
+                      length="255"
+                      lineageId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[customer_id]"
+                      name="customer_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[customer_unique_id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[customer_unique_id]"
+                      length="255"
+                      lineageId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[customer_unique_id]"
+                      name="customer_unique_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Customerfname]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Customerfname]"
+                      length="255"
+                      lineageId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Customerfname]"
+                      name="Customerfname"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Customerlname]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Customerlname]"
+                      length="255"
+                      lineageId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Customerlname]"
+                      name="Customerlname"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Gender]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Gender]"
+                      length="255"
+                      lineageId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Gender]"
+                      name="Gender"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[PhonrNumber]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PhonrNumber]"
+                      length="255"
+                      lineageId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[PhonrNumber]"
+                      name="PhonrNumber"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Email]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Email]"
+                      length="255"
+                      lineageId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Email]"
+                      name="Email"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[customer_id]"
+                      dataType="wstr"
+                      length="255"
+                      name="customer_id" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[customer_unique_id]"
+                      dataType="wstr"
+                      length="255"
+                      name="customer_unique_id" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Customerfname]"
+                      dataType="wstr"
+                      length="255"
+                      name="Customerfname" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Customerlname]"
+                      dataType="wstr"
+                      length="255"
+                      name="Customerlname" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Gender]"
+                      dataType="wstr"
+                      length="255"
+                      name="Gender" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PhonrNumber]"
+                      dataType="wstr"
+                      length="255"
+                      name="PhonrNumber" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Email]"
+                      dataType="wstr"
+                      length="255"
+                      name="Email" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[customer_id]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[customer_id]"
+                      name="customer_id" />
+                    <outputColumn
+                      refId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[customer_unique_id]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[customer_unique_id]"
+                      name="customer_unique_id" />
+                    <outputColumn
+                      refId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Customerfname]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Customerfname]"
+                      name="Customerfname" />
+                    <outputColumn
+                      refId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Customerlname]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Customerlname]"
+                      name="Customerlname" />
+                    <outputColumn
+                      refId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Gender]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Gender]"
+                      name="Gender" />
+                    <outputColumn
+                      refId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PhonrNumber]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PhonrNumber]"
+                      name="PhonrNumber" />
+                    <outputColumn
+                      refId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Email]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Email]"
+                      name="Email" />
+                    <outputColumn
+                      refId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Extract Customer Data to Staging.Paths[OLE DB Source Output]"
+              endId="Package\Extract Customer Data to Staging\Load Data to to Customer Staging table.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Extract Customer Data to Staging\OLE DB Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Extract Product Data to Staging"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{D4DB457C-DD28-4CDD-A5DD-B949AF2C9AA7}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Extract Product Data to Staging"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:EventHandlers>
+        <DTS:EventHandler
+          DTS:refId="Package\Extract Product Data to Staging.EventHandlers[OnPreExecute]"
+          DTS:CreationName="OnPreExecute"
+          DTS:DTSID="{8BC34DFE-606F-4023-9FD2-17AB934CA28A}"
+          DTS:EventID="0"
+          DTS:EventName="OnPreExecute"
+          DTS:LocaleID="-1">
+          <DTS:Variables>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:Description="The propagate property of the event"
+              DTS:DTSID="{DCC99EC2-8551-4944-9497-DF56C6A8D05D}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="System"
+              DTS:ObjectName="Propagate">
+              <DTS:VariableValue
+                DTS:DataType="11">-1</DTS:VariableValue>
+            </DTS:Variable>
+          </DTS:Variables>
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\Extract Product Data to Staging.EventHandlers[OnPreExecute]\Truncate Product Staging Table"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{D7608F6D-3D1F-40AD-9428-DCD1369C3823}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Truncate Product Staging Table">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{3A3A752C-5B9E-4AFB-B5C1-ED1873243C8A}"
+                  SQLTask:SqlStatementSource="truncate table dbo.Product_Staging" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+        </DTS:EventHandler>
+      </DTS:EventHandlers>
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Extract Product Data to Staging\Load Data to Product Staging table"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Load Data to Product Staging table"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Product_Staging]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract Product Data to Staging\Load Data to Product Staging table.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-MBM4LPUK.SourceDB_DW]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-MBM4LPUK.SourceDB_DW]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Extract Product Data to Staging\Load Data to Product Staging table.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract Product Data to Staging\Load Data to Product Staging table.Inputs[OLE DB Destination Input].Columns[product_id]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="product_id"
+                      externalMetadataColumnId="Package\Extract Product Data to Staging\Load Data to Product Staging table.Inputs[OLE DB Destination Input].ExternalColumns[product_id]"
+                      lineageId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[product_id]" />
+                    <inputColumn
+                      refId="Package\Extract Product Data to Staging\Load Data to Product Staging table.Inputs[OLE DB Destination Input].Columns[product_category_name]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="product_category_name"
+                      externalMetadataColumnId="Package\Extract Product Data to Staging\Load Data to Product Staging table.Inputs[OLE DB Destination Input].ExternalColumns[product_category_name]"
+                      lineageId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[product_category_name]" />
+                    <inputColumn
+                      refId="Package\Extract Product Data to Staging\Load Data to Product Staging table.Inputs[OLE DB Destination Input].Columns[product_name_lenght]"
+                      cachedDataType="r8"
+                      cachedName="product_name_lenght"
+                      externalMetadataColumnId="Package\Extract Product Data to Staging\Load Data to Product Staging table.Inputs[OLE DB Destination Input].ExternalColumns[product_name_lenght]"
+                      lineageId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[product_name_lenght]" />
+                    <inputColumn
+                      refId="Package\Extract Product Data to Staging\Load Data to Product Staging table.Inputs[OLE DB Destination Input].Columns[product_description_lenght]"
+                      cachedDataType="r8"
+                      cachedName="product_description_lenght"
+                      externalMetadataColumnId="Package\Extract Product Data to Staging\Load Data to Product Staging table.Inputs[OLE DB Destination Input].ExternalColumns[product_description_lenght]"
+                      lineageId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[product_description_lenght]" />
+                    <inputColumn
+                      refId="Package\Extract Product Data to Staging\Load Data to Product Staging table.Inputs[OLE DB Destination Input].Columns[product_photos_qty]"
+                      cachedDataType="r8"
+                      cachedName="product_photos_qty"
+                      externalMetadataColumnId="Package\Extract Product Data to Staging\Load Data to Product Staging table.Inputs[OLE DB Destination Input].ExternalColumns[product_photos_qty]"
+                      lineageId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[product_photos_qty]" />
+                    <inputColumn
+                      refId="Package\Extract Product Data to Staging\Load Data to Product Staging table.Inputs[OLE DB Destination Input].Columns[product_weight_g]"
+                      cachedDataType="r8"
+                      cachedName="product_weight_g"
+                      externalMetadataColumnId="Package\Extract Product Data to Staging\Load Data to Product Staging table.Inputs[OLE DB Destination Input].ExternalColumns[product_weight_g]"
+                      lineageId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[product_weight_g]" />
+                    <inputColumn
+                      refId="Package\Extract Product Data to Staging\Load Data to Product Staging table.Inputs[OLE DB Destination Input].Columns[product_length_cm]"
+                      cachedDataType="r8"
+                      cachedName="product_length_cm"
+                      externalMetadataColumnId="Package\Extract Product Data to Staging\Load Data to Product Staging table.Inputs[OLE DB Destination Input].ExternalColumns[product_length_cm]"
+                      lineageId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[product_length_cm]" />
+                    <inputColumn
+                      refId="Package\Extract Product Data to Staging\Load Data to Product Staging table.Inputs[OLE DB Destination Input].Columns[product_height_cm]"
+                      cachedDataType="r8"
+                      cachedName="product_height_cm"
+                      externalMetadataColumnId="Package\Extract Product Data to Staging\Load Data to Product Staging table.Inputs[OLE DB Destination Input].ExternalColumns[product_height_cm]"
+                      lineageId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[product_height_cm]" />
+                    <inputColumn
+                      refId="Package\Extract Product Data to Staging\Load Data to Product Staging table.Inputs[OLE DB Destination Input].Columns[product_width_cm]"
+                      cachedDataType="r8"
+                      cachedName="product_width_cm"
+                      externalMetadataColumnId="Package\Extract Product Data to Staging\Load Data to Product Staging table.Inputs[OLE DB Destination Input].ExternalColumns[product_width_cm]"
+                      lineageId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[product_width_cm]" />
+                    <inputColumn
+                      refId="Package\Extract Product Data to Staging\Load Data to Product Staging table.Inputs[OLE DB Destination Input].Columns[seller_id]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="seller_id"
+                      externalMetadataColumnId="Package\Extract Product Data to Staging\Load Data to Product Staging table.Inputs[OLE DB Destination Input].ExternalColumns[seller_id]"
+                      lineageId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[seller_id]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract Product Data to Staging\Load Data to Product Staging table.Inputs[OLE DB Destination Input].ExternalColumns[product_id]"
+                      dataType="wstr"
+                      length="255"
+                      name="product_id" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Product Data to Staging\Load Data to Product Staging table.Inputs[OLE DB Destination Input].ExternalColumns[product_category_name]"
+                      dataType="wstr"
+                      length="255"
+                      name="product_category_name" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Product Data to Staging\Load Data to Product Staging table.Inputs[OLE DB Destination Input].ExternalColumns[product_name_lenght]"
+                      dataType="r8"
+                      name="product_name_lenght" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Product Data to Staging\Load Data to Product Staging table.Inputs[OLE DB Destination Input].ExternalColumns[product_description_lenght]"
+                      dataType="r8"
+                      name="product_description_lenght" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Product Data to Staging\Load Data to Product Staging table.Inputs[OLE DB Destination Input].ExternalColumns[product_photos_qty]"
+                      dataType="r8"
+                      name="product_photos_qty" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Product Data to Staging\Load Data to Product Staging table.Inputs[OLE DB Destination Input].ExternalColumns[product_weight_g]"
+                      dataType="r8"
+                      name="product_weight_g" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Product Data to Staging\Load Data to Product Staging table.Inputs[OLE DB Destination Input].ExternalColumns[product_length_cm]"
+                      dataType="r8"
+                      name="product_length_cm" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Product Data to Staging\Load Data to Product Staging table.Inputs[OLE DB Destination Input].ExternalColumns[product_height_cm]"
+                      dataType="r8"
+                      name="product_height_cm" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Product Data to Staging\Load Data to Product Staging table.Inputs[OLE DB Destination Input].ExternalColumns[product_width_cm]"
+                      dataType="r8"
+                      name="product_width_cm" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Product Data to Staging\Load Data to Product Staging table.Inputs[OLE DB Destination Input].ExternalColumns[seller_id]"
+                      dataType="wstr"
+                      length="255"
+                      name="seller_id" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extract Product Data to Staging\Load Data to Product Staging table.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Extract Product Data to Staging\Load Data to Product Staging table.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Product Data to Staging\Load Data to Product Staging table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract Product Data to Staging\Load Data to Product Staging table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract Product Data to Staging\Load Data to Product Staging table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract Product Data to Staging\Load Data to Product Staging table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract Product Data to Staging\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Product]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract Product Data to Staging\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-MBM4LPUK.SourceDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-MBM4LPUK.SourceDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[product_id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[product_id]"
+                      length="255"
+                      lineageId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[product_id]"
+                      name="product_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[product_category_name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[product_category_name]"
+                      length="255"
+                      lineageId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[product_category_name]"
+                      name="product_category_name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[product_name_lenght]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[product_name_lenght]"
+                      lineageId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[product_name_lenght]"
+                      name="product_name_lenght"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[product_description_lenght]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[product_description_lenght]"
+                      lineageId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[product_description_lenght]"
+                      name="product_description_lenght"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[product_photos_qty]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[product_photos_qty]"
+                      lineageId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[product_photos_qty]"
+                      name="product_photos_qty"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[product_weight_g]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[product_weight_g]"
+                      lineageId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[product_weight_g]"
+                      name="product_weight_g"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[product_length_cm]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[product_length_cm]"
+                      lineageId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[product_length_cm]"
+                      name="product_length_cm"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[product_height_cm]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[product_height_cm]"
+                      lineageId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[product_height_cm]"
+                      name="product_height_cm"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[product_width_cm]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[product_width_cm]"
+                      lineageId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[product_width_cm]"
+                      name="product_width_cm"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[seller_id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[seller_id]"
+                      length="255"
+                      lineageId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[seller_id]"
+                      name="seller_id"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[product_id]"
+                      dataType="wstr"
+                      length="255"
+                      name="product_id" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[product_category_name]"
+                      dataType="wstr"
+                      length="255"
+                      name="product_category_name" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[product_name_lenght]"
+                      dataType="r8"
+                      name="product_name_lenght" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[product_description_lenght]"
+                      dataType="r8"
+                      name="product_description_lenght" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[product_photos_qty]"
+                      dataType="r8"
+                      name="product_photos_qty" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[product_weight_g]"
+                      dataType="r8"
+                      name="product_weight_g" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[product_length_cm]"
+                      dataType="r8"
+                      name="product_length_cm" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[product_height_cm]"
+                      dataType="r8"
+                      name="product_height_cm" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[product_width_cm]"
+                      dataType="r8"
+                      name="product_width_cm" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[seller_id]"
+                      dataType="wstr"
+                      length="255"
+                      name="seller_id" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[product_id]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[product_id]"
+                      name="product_id" />
+                    <outputColumn
+                      refId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[product_category_name]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[product_category_name]"
+                      name="product_category_name" />
+                    <outputColumn
+                      refId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[product_name_lenght]"
+                      dataType="r8"
+                      lineageId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[product_name_lenght]"
+                      name="product_name_lenght" />
+                    <outputColumn
+                      refId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[product_description_lenght]"
+                      dataType="r8"
+                      lineageId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[product_description_lenght]"
+                      name="product_description_lenght" />
+                    <outputColumn
+                      refId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[product_photos_qty]"
+                      dataType="r8"
+                      lineageId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[product_photos_qty]"
+                      name="product_photos_qty" />
+                    <outputColumn
+                      refId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[product_weight_g]"
+                      dataType="r8"
+                      lineageId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[product_weight_g]"
+                      name="product_weight_g" />
+                    <outputColumn
+                      refId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[product_length_cm]"
+                      dataType="r8"
+                      lineageId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[product_length_cm]"
+                      name="product_length_cm" />
+                    <outputColumn
+                      refId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[product_height_cm]"
+                      dataType="r8"
+                      lineageId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[product_height_cm]"
+                      name="product_height_cm" />
+                    <outputColumn
+                      refId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[product_width_cm]"
+                      dataType="r8"
+                      lineageId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[product_width_cm]"
+                      name="product_width_cm" />
+                    <outputColumn
+                      refId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[seller_id]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[seller_id]"
+                      name="seller_id" />
+                    <outputColumn
+                      refId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Extract Product Data to Staging.Paths[OLE DB Source Output]"
+              endId="Package\Extract Product Data to Staging\Load Data to Product Staging table.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Extract Product Data to Staging\OLE DB Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Extract Sellers Data to Staging"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{BCCC9EE7-83DD-465D-A519-40D34B2DF44D}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Extract Sellers Data to Staging"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:EventHandlers>
+        <DTS:EventHandler
+          DTS:refId="Package\Extract Sellers Data to Staging.EventHandlers[OnPreExecute]"
+          DTS:CreationName="OnPreExecute"
+          DTS:DTSID="{D2EC4811-C62B-422A-AB34-8D2ED38B00B1}"
+          DTS:EventID="0"
+          DTS:EventName="OnPreExecute"
+          DTS:LocaleID="-1">
+          <DTS:Variables>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:Description="The propagate property of the event"
+              DTS:DTSID="{3D82B986-282B-447A-9836-8A021940D949}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="System"
+              DTS:ObjectName="Propagate">
+              <DTS:VariableValue
+                DTS:DataType="11">-1</DTS:VariableValue>
+            </DTS:Variable>
+          </DTS:Variables>
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\Extract Sellers Data to Staging.EventHandlers[OnPreExecute]\Truncate Sellers Staging Table"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{BEF7F2D7-93F3-46B3-AA16-74E3D4838EC8}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Truncate Sellers Staging Table">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{3A3A752C-5B9E-4AFB-B5C1-ED1873243C8A}"
+                  SQLTask:SqlStatementSource="truncate table dbo.SellerDetails_Staging" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+        </DTS:EventHandler>
+      </DTS:EventHandlers>
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Extract Sellers Data to Staging\Load Data to Sellers Staging table"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Load Data to Sellers Staging table"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[SellerDetails_Staging]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract Sellers Data to Staging\Load Data to Sellers Staging table.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-MBM4LPUK.SourceDB_DW]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-MBM4LPUK.SourceDB_DW]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Extract Sellers Data to Staging\Load Data to Sellers Staging table.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract Sellers Data to Staging\Load Data to Sellers Staging table.Inputs[OLE DB Destination Input].Columns[seller_id]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="seller_id"
+                      externalMetadataColumnId="Package\Extract Sellers Data to Staging\Load Data to Sellers Staging table.Inputs[OLE DB Destination Input].ExternalColumns[seller_id]"
+                      lineageId="Package\Extract Sellers Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[seller_id]" />
+                    <inputColumn
+                      refId="Package\Extract Sellers Data to Staging\Load Data to Sellers Staging table.Inputs[OLE DB Destination Input].Columns[seller_zip_code_prefix]"
+                      cachedDataType="r8"
+                      cachedName="seller_zip_code_prefix"
+                      externalMetadataColumnId="Package\Extract Sellers Data to Staging\Load Data to Sellers Staging table.Inputs[OLE DB Destination Input].ExternalColumns[seller_zip_code_prefix]"
+                      lineageId="Package\Extract Sellers Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[seller_zip_code_prefix]" />
+                    <inputColumn
+                      refId="Package\Extract Sellers Data to Staging\Load Data to Sellers Staging table.Inputs[OLE DB Destination Input].Columns[seller_city]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="seller_city"
+                      externalMetadataColumnId="Package\Extract Sellers Data to Staging\Load Data to Sellers Staging table.Inputs[OLE DB Destination Input].ExternalColumns[seller_city]"
+                      lineageId="Package\Extract Sellers Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[seller_city]" />
+                    <inputColumn
+                      refId="Package\Extract Sellers Data to Staging\Load Data to Sellers Staging table.Inputs[OLE DB Destination Input].Columns[seller_state]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="seller_state"
+                      externalMetadataColumnId="Package\Extract Sellers Data to Staging\Load Data to Sellers Staging table.Inputs[OLE DB Destination Input].ExternalColumns[seller_state]"
+                      lineageId="Package\Extract Sellers Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[seller_state]" />
+                    <inputColumn
+                      refId="Package\Extract Sellers Data to Staging\Load Data to Sellers Staging table.Inputs[OLE DB Destination Input].Columns[LICENSE CODE]"
+                      cachedDataType="r8"
+                      cachedName="LICENSE CODE"
+                      externalMetadataColumnId="Package\Extract Sellers Data to Staging\Load Data to Sellers Staging table.Inputs[OLE DB Destination Input].ExternalColumns[LICENSE CODE]"
+                      lineageId="Package\Extract Sellers Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[LICENSE CODE]" />
+                    <inputColumn
+                      refId="Package\Extract Sellers Data to Staging\Load Data to Sellers Staging table.Inputs[OLE DB Destination Input].Columns[LICENSE DESCRIPTION]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="LICENSE DESCRIPTION"
+                      externalMetadataColumnId="Package\Extract Sellers Data to Staging\Load Data to Sellers Staging table.Inputs[OLE DB Destination Input].ExternalColumns[LICENSE DESCRIPTION]"
+                      lineageId="Package\Extract Sellers Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[LICENSE DESCRIPTION]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract Sellers Data to Staging\Load Data to Sellers Staging table.Inputs[OLE DB Destination Input].ExternalColumns[seller_id]"
+                      dataType="wstr"
+                      length="255"
+                      name="seller_id" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sellers Data to Staging\Load Data to Sellers Staging table.Inputs[OLE DB Destination Input].ExternalColumns[seller_zip_code_prefix]"
+                      dataType="r8"
+                      name="seller_zip_code_prefix" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sellers Data to Staging\Load Data to Sellers Staging table.Inputs[OLE DB Destination Input].ExternalColumns[seller_city]"
+                      dataType="wstr"
+                      length="255"
+                      name="seller_city" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sellers Data to Staging\Load Data to Sellers Staging table.Inputs[OLE DB Destination Input].ExternalColumns[seller_state]"
+                      dataType="wstr"
+                      length="255"
+                      name="seller_state" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sellers Data to Staging\Load Data to Sellers Staging table.Inputs[OLE DB Destination Input].ExternalColumns[LICENSE CODE]"
+                      dataType="r8"
+                      name="LICENSE CODE" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sellers Data to Staging\Load Data to Sellers Staging table.Inputs[OLE DB Destination Input].ExternalColumns[LICENSE DESCRIPTION]"
+                      dataType="wstr"
+                      length="255"
+                      name="LICENSE DESCRIPTION" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extract Sellers Data to Staging\Load Data to Sellers Staging table.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Extract Sellers Data to Staging\Load Data to Sellers Staging table.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Sellers Data to Staging\Load Data to Sellers Staging table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract Sellers Data to Staging\Load Data to Sellers Staging table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract Sellers Data to Staging\Load Data to Sellers Staging table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract Sellers Data to Staging\Load Data to Sellers Staging table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract Sellers Data to Staging\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[SellerDetails]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract Sellers Data to Staging\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-MBM4LPUK.SourceDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-MBM4LPUK.SourceDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Extract Sellers Data to Staging\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Sellers Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[seller_id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Sellers Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[seller_id]"
+                      length="255"
+                      lineageId="Package\Extract Sellers Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[seller_id]"
+                      name="seller_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Sellers Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[seller_zip_code_prefix]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Sellers Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[seller_zip_code_prefix]"
+                      lineageId="Package\Extract Sellers Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[seller_zip_code_prefix]"
+                      name="seller_zip_code_prefix"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Sellers Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[seller_city]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Sellers Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[seller_city]"
+                      length="255"
+                      lineageId="Package\Extract Sellers Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[seller_city]"
+                      name="seller_city"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Sellers Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[seller_state]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Sellers Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[seller_state]"
+                      length="255"
+                      lineageId="Package\Extract Sellers Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[seller_state]"
+                      name="seller_state"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Sellers Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[LICENSE CODE]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Sellers Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[LICENSE CODE]"
+                      lineageId="Package\Extract Sellers Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[LICENSE CODE]"
+                      name="LICENSE CODE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Sellers Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[LICENSE DESCRIPTION]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Sellers Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[LICENSE DESCRIPTION]"
+                      length="255"
+                      lineageId="Package\Extract Sellers Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[LICENSE DESCRIPTION]"
+                      name="LICENSE DESCRIPTION"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract Sellers Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[seller_id]"
+                      dataType="wstr"
+                      length="255"
+                      name="seller_id" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sellers Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[seller_zip_code_prefix]"
+                      dataType="r8"
+                      name="seller_zip_code_prefix" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sellers Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[seller_city]"
+                      dataType="wstr"
+                      length="255"
+                      name="seller_city" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sellers Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[seller_state]"
+                      dataType="wstr"
+                      length="255"
+                      name="seller_state" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sellers Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[LICENSE CODE]"
+                      dataType="r8"
+                      name="LICENSE CODE" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sellers Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[LICENSE DESCRIPTION]"
+                      dataType="wstr"
+                      length="255"
+                      name="LICENSE DESCRIPTION" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Extract Sellers Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Sellers Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[seller_id]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Extract Sellers Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[seller_id]"
+                      name="seller_id" />
+                    <outputColumn
+                      refId="Package\Extract Sellers Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[seller_zip_code_prefix]"
+                      dataType="r8"
+                      lineageId="Package\Extract Sellers Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[seller_zip_code_prefix]"
+                      name="seller_zip_code_prefix" />
+                    <outputColumn
+                      refId="Package\Extract Sellers Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[seller_city]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Extract Sellers Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[seller_city]"
+                      name="seller_city" />
+                    <outputColumn
+                      refId="Package\Extract Sellers Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[seller_state]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Extract Sellers Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[seller_state]"
+                      name="seller_state" />
+                    <outputColumn
+                      refId="Package\Extract Sellers Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[LICENSE CODE]"
+                      dataType="r8"
+                      lineageId="Package\Extract Sellers Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[LICENSE CODE]"
+                      name="LICENSE CODE" />
+                    <outputColumn
+                      refId="Package\Extract Sellers Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[LICENSE DESCRIPTION]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Extract Sellers Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[LICENSE DESCRIPTION]"
+                      name="LICENSE DESCRIPTION" />
+                    <outputColumn
+                      refId="Package\Extract Sellers Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract Sellers Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract Sellers Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract Sellers Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Extract Sellers Data to Staging.Paths[OLE DB Source Output]"
+              endId="Package\Extract Sellers Data to Staging\Load Data to Sellers Staging table.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Extract Sellers Data to Staging\OLE DB Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{658C829A-F2F3-4F24-985E-0A98CFCCF4E7}"
+      DTS:From="Package\Extract Customer Data to Staging"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Extract Product Data to Staging" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{41E87C73-33A7-4EDE-A22F-02B0E021672B}"
+      DTS:From="Package\Extract Product Data to Staging"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Extract Sellers Data to Staging" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{E9A46053-577B-4E71-8C3B-27EFAC432873}"
+      DTS:From="Package\Extract Sellers Data to Staging"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Extract Customer Address Text Data to Staging" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="236,41.6"
+          Id="Package\Extract Customer Data to Staging"
+          TopLeft="46.2857150739553,31.8117651520304" />
+        <NodeLayout
+          Size="227.2,41.6"
+          Id="Package\Extract Product Data to Staging"
+          TopLeft="70.2857154826729,107.058825030871" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="164.285715073955,73.4117651520304">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="19.6000004087176,33.647059878841"
+              Start="0,0"
+              End="19.6000004087176,26.147059878841">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.8235299394205" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.8235299394205"
+                    Point2="0,16.8235299394205"
+                    Point3="4,16.8235299394205" />
+                  <mssgle:LineSegment
+                    End="15.6000004087176,16.8235299394205" />
+                  <mssgle:CubicBezierSegment
+                    Point1="15.6000004087176,16.8235299394205"
+                    Point2="19.6000004087176,16.8235299394205"
+                    Point3="19.6000004087176,20.8235299394205" />
+                  <mssgle:LineSegment
+                    End="19.6000004087176,26.147059878841" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="221.6,41.6"
+          Id="Package\Extract Sellers Data to Staging"
+          TopLeft="136.571430897226,184.141179053099" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="183.885715482673,148.658825030871">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="63.4857154145533,35.4823540222274"
+              Start="0,0"
+              End="63.4857154145533,27.9823540222274">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.7411770111137" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.7411770111137"
+                    Point2="0,17.7411770111137"
+                    Point3="4,17.7411770111137" />
+                  <mssgle:LineSegment
+                    End="59.4857154145533,17.7411770111137" />
+                  <mssgle:CubicBezierSegment
+                    Point1="59.4857154145533,17.7411770111137"
+                    Point2="63.4857154145533,17.7411770111137"
+                    Point3="63.4857154145533,21.7411770111137" />
+                  <mssgle:LineSegment
+                    End="63.4857154145533,27.9823540222274" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="300.8,41.6"
+          Id="Package\Extract Customer Address Text Data to Staging"
+          TopLeft="210.285717866859,263.952944642697" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="247.371430897226,225.741179053099">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="113.314286969633,38.2117655895986"
+              Start="0,0"
+              End="113.314286969633,30.7117655895986">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.1058827947993" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15.1058827947993"
+                    Point2="0,19.1058827947993"
+                    Point3="4,19.1058827947993" />
+                  <mssgle:LineSegment
+                    End="109.314286969633,19.1058827947993" />
+                  <mssgle:CubicBezierSegment
+                    Point1="109.314286969633,19.1058827947993"
+                    Point2="113.314286969633,19.1058827947993"
+                    Point3="113.314286969633,23.1058827947993" />
+                  <mssgle:LineSegment
+                    End="113.314286969633,30.7117655895986" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Extract Customer Data to Staging">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="149.6,41.6"
+          Id="Package\Extract Customer Data to Staging\OLE DB Source"
+          TopLeft="127.428573598667,18.9647061483258" />
+        <NodeLayout
+          Size="264.8,41.6"
+          Id="Package\Extract Customer Data to Staging\Load Data to to Customer Staging table"
+          TopLeft="113.142859069669,102.164707315174" />
+        <EdgeLayout
+          Id="Package\Extract Customer Data to Staging.Paths[OLE DB Source Output]"
+          TopLeft="202.228573598667,60.5647061483258">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="43.3142854710014,41.6000011668486"
+              Start="0,0"
+              End="43.3142854710014,34.1000011668486">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.8000005834243" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.8000005834243"
+                    Point2="0,20.8000005834243"
+                    Point3="4,20.8000005834243" />
+                  <mssgle:LineSegment
+                    End="39.3142854710014,20.8000005834243" />
+                  <mssgle:CubicBezierSegment
+                    Point1="39.3142854710014,20.8000005834243"
+                    Point2="43.3142854710014,20.8000005834243"
+                    Point3="43.3142854710014,24.8000005834243" />
+                  <mssgle:LineSegment
+                    End="43.3142854710014,34.1000011668486" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Customer Data to Staging\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Customer Data to Staging\Load Data to to Customer Staging table">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <DtsEventHandler
+    design-time-name="Package\Extract Customer Data to Staging.EventHandlers[OnPreExecute]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="236,41.6"
+          Id="Package\Extract Customer Data to Staging.EventHandlers[OnPreExecute]\Truncate Customer Staging Table"
+          TopLeft="239.2,41.6" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+  <TaskHost
+    design-time-name="Package\Extract Product Data to Staging">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="149.6,41.6"
+          Id="Package\Extract Product Data to Staging\OLE DB Source"
+          TopLeft="148.8,40.8" />
+        <NodeLayout
+          Size="243.2,41.6"
+          Id="Package\Extract Product Data to Staging\Load Data to Product Staging table"
+          TopLeft="144.8,148" />
+        <EdgeLayout
+          Id="Package\Extract Product Data to Staging.Paths[OLE DB Source Output]"
+          TopLeft="223.6,82.4">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="42.8000000000001,65.6"
+              Start="0,0"
+              End="42.8000000000001,58.1">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.8" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28.8"
+                    Point2="0,32.8"
+                    Point3="4,32.8" />
+                  <mssgle:LineSegment
+                    End="38.8000000000001,32.8" />
+                  <mssgle:CubicBezierSegment
+                    Point1="38.8000000000001,32.8"
+                    Point2="42.8000000000001,32.8"
+                    Point3="42.8000000000001,36.8" />
+                  <mssgle:LineSegment
+                    End="42.8000000000001,58.1" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Product Data to Staging\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Product Data to Staging\Load Data to Product Staging table">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <DtsEventHandler
+    design-time-name="Package\Extract Product Data to Staging.EventHandlers[OnPreExecute]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="227.2,41.6"
+          Id="Package\Extract Product Data to Staging.EventHandlers[OnPreExecute]\Truncate Product Staging Table"
+          TopLeft="114.4,33.6" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+  <TaskHost
+    design-time-name="Package\Extract Sellers Data to Staging">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="149.6,41.6"
+          Id="Package\Extract Sellers Data to Staging\OLE DB Source"
+          TopLeft="200.8,52" />
+        <NodeLayout
+          Size="238.4,41.6"
+          Id="Package\Extract Sellers Data to Staging\Load Data to Sellers Staging table"
+          TopLeft="194.4,139.2" />
+        <EdgeLayout
+          Id="Package\Extract Sellers Data to Staging.Paths[OLE DB Source Output]"
+          TopLeft="275.6,93.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="38,45.6"
+              Start="0,0"
+              End="38,38.1">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.8" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.8"
+                    Point2="0,22.8"
+                    Point3="4,22.8" />
+                  <mssgle:LineSegment
+                    End="34,22.8" />
+                  <mssgle:CubicBezierSegment
+                    Point1="34,22.8"
+                    Point2="38,22.8"
+                    Point3="38,26.8" />
+                  <mssgle:LineSegment
+                    End="38,38.1" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Sellers Data to Staging\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Sellers Data to Staging\Load Data to Sellers Staging table">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <DtsEventHandler
+    design-time-name="Package\Extract Sellers Data to Staging.EventHandlers[OnPreExecute]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="221.6,41.6"
+          Id="Package\Extract Sellers Data to Staging.EventHandlers[OnPreExecute]\Truncate Sellers Staging Table"
+          TopLeft="210.4,52" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+  <TaskHost
+    design-time-name="Package\Extract Customer Address Text Data to Staging">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\Extract Customer Address Text Data to Staging\Flat File Source"
+          TopLeft="233.6,46.4" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\Extract Customer Address Text Data to Staging\OLE DB Destination"
+          TopLeft="232.8,134.4" />
+        <EdgeLayout
+          Id="Package\Extract Customer Address Text Data to Staging.Paths[Flat File Source Output]"
+          TopLeft="308.8,88">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="9.19999999999999,46.4"
+              Start="0,0"
+              End="9.19999999999999,38.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.2"
+                    Point2="0,23.2"
+                    Point3="4,23.2" />
+                  <mssgle:LineSegment
+                    End="5.19999999999999,23.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="5.19999999999999,23.2"
+                    Point2="9.19999999999999,23.2"
+                    Point3="9.19999999999999,27.2" />
+                  <mssgle:LineSegment
+                    End="9.19999999999999,38.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Customer Address Text Data to Staging\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
