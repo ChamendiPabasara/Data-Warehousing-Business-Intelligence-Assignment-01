@@ -1,0 +1,44 @@
+Create Procedure dbo.UpdateSellerDetails
+@SellerID nvarchar(255),
+@seller_zip_code_prefix int,
+@seller_city nvarchar(50),
+@seller_state nvarchar(5),
+@LicenceCode int,
+@LicenceDescription nvarchar(50)
+
+as
+Begin
+if not exists (select SellerID
+from dbo.Dim_Seller
+where AlternateSellerID = @SellerID 
+and seller_zip_code_prefix= @seller_zip_code_prefix
+and seller_city  = @seller_city
+and seller_state = @seller_state
+and LicenceCode = @LicenceCode
+and LicenceDescription = @LicenceDescription  )
+begin
+insert into dbo.Dim_Seller
+(AlternateSellerID ,seller_zip_code_prefix, seller_city,seller_state,LicenceCode,LicenceDescription)
+values
+(@SellerID, @seller_zip_code_prefix, @seller_city,@seller_state,@LicenceCode,@LicenceDescription)
+end;
+End;
+
+
+order_purchase_DateKey
+(DT_WSTR,4)YEAR(order_purchase_timestamp) + RIGHT("0" + (DT_WSTR,2)MONTH(order_purchase_timestamp),2) + RIGHT("0" + (DT_WSTR,2)DAY(order_purchase_timestamp),2)
+
+order_approved_DateKey
+(DT_WSTR,4)YEAR(order_approved_at) + RIGHT("0" + (DT_WSTR,2)MONTH(order_approved_at),2) + RIGHT("0" + (DT_WSTR,2)DAY(order_approved_at),2)
+
+order_delivered_carrier_DateKey
+(DT_WSTR,4)YEAR(order_delivered_carrier_date) + RIGHT("0" + (DT_WSTR,2)MONTH(order_delivered_carrier_date),2) + RIGHT("0" + (DT_WSTR,2)DAY(order_delivered_carrier_date),2)
+
+order_delivered_customer_DateKey
+
+order_estimated_delivery_DateKey
+
+(DT_WSTR,4)YEAR(order_delivered_customer_date) + RIGHT("0" + (DT_WSTR,2)MONTH(order_delivered_customer_date),2) + RIGHT("0" + (DT_WSTR,2)DAY(order_delivered_customer_date),2)
+
+
+(DT_WSTR,4)YEAR(order_estimated_delivery_date) + RIGHT("0" + (DT_WSTR,2)MONTH(order_estimated_delivery_date),2) + RIGHT("0" + (DT_WSTR,2)DAY(order_estimated_delivery_date),2) ++ RIGHT("0" + (DT_WSTR,2)HOUR(order_estimated_delivery_date),2)++ RIGHT("0" + (DT_WSTR,2)MINUTES(order_estimated_delivery_date),2)++ RIGHT("0" + (DT_WSTR,2)SECOUNDS(order_estimated_delivery_date),2)
